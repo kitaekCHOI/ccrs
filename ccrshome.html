@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function openCenteredWindow(url, title, w, h) {
+            // Fixes dual-screen position                         Most browsers      Firefox
+            var dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screenX;
+            var dualScreenTop = window.screenTop !== undefined ? window.screenTop : window.screenY;
+
+            var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+            var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+            var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+            var top = ((height / 2) - (h / 2)) + dualScreenTop;
+            var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+            // Puts focus on the newWindow
+            if (window.focus) {
+                newWindow.focus();
+            }
+        }
+    </script>
 </head>
 <body>
     <h1> CCRS 홈페이지 제작중......</h1>
@@ -11,7 +30,7 @@
     <h1> CCRS 홈페이지 제작중......</h1>
     <h1> CCRS Update 2025.03.05. 11:10.</h1>
 
-    <button onclick="window.open('100.html', 'newwindow', 'width=400,height=300')">채무조정</button>
+    <button onclick="openCenteredWindow('100.html', 'newwindow', 400, 300)">채무조정</button>
     <button>상환유예재조정</button>
     <button>수정 재조정</button>
     <button>성실상환자혜택</button>
