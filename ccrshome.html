@@ -20,6 +20,42 @@
     <button onclick="openCenteredWindow('02.html', 'newwindow', 900, 800)">수정 재조정</button>
     <button onclick="openCenteredWindow('01.html', 'newwindow', 900, 800)">성실상환자혜택</button>
     <button>소액대출지원대상</button>
+
+    <div>
+        <h2>공지사항</h2>
+        <form id="noticeForm">
+            <label for="noticeTitle">제목:</label>
+            <input type="text" id="noticeTitle" name="noticeTitle" required>
+            <br>
+            <label for="noticeContent">내용:</label>
+            <textarea id="noticeContent" name="noticeContent" rows="4" required></textarea>
+            <br>
+            <button type="button" onclick="addNotice()">등록</button>
+        </form>
+        <hr>
+        <div id="noticeBoard">
+            <h3>등록된 공지사항</h3>
+            <ul id="noticeList"></ul>
+        </div>
+    </div>
+
+    <script>
+        function addNotice() {
+            const title = document.getElementById('noticeTitle').value;
+            const content = document.getElementById('noticeContent').value;
+
+            if (title && content) {
+                const noticeList = document.getElementById('noticeList');
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>${title}</strong><br>${content}`;
+                noticeList.appendChild(listItem);
+
+                document.getElementById('noticeForm').reset();
+            } else {
+                alert('제목과 내용을 입력해주세요.');
+            }
+        }
+    </script>
     
 </body>
 </html>
