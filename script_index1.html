@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상담유형 경로별 기본 상담방향</title>
     <script>
-        function showImage(imagePath) {
-            window.open(imagePath, '_blank', 'width=800,height=600');
+        function showImage(imagePath, fullHeight = false) {
+            const height = fullHeight ? window.innerHeight : 600;
+            window.open(imagePath, '_blank', `width=800,height=${height}`);
         }
     </script>
     <style>
@@ -63,7 +64,7 @@
                 <div class="toc-item-page">1</div>
             </div>
             <div class="toc-item">
-                <div class="toc-item-title clickable" onclick="showImage('images/2.jpg')">2. 사이버민원 제조정 부적격자</div>
+                <div class="toc-item-title clickable" onclick="showImage('images/2.jpg')">2. 사이버민원 재조정 부적격자</div>
                 <div class="toc-item-page">2</div>
             </div>
             <div class="toc-item">
@@ -75,7 +76,7 @@
                 <div class="toc-item-page">4</div>
             </div>
             <div class="toc-item">
-                <div class="toc-item-title">5. 서금원 플랫폼 사금융 예방 대출 이용자</div>
+                <div class="toc-item-title clickable" onclick="showImage('images/5.jpg', true)">5. 서금원 플랫폼 사금융 예방 대출 이용자</div>
                 <div class="toc-item-page">5</div>
             </div>
         </div>
