@@ -9,6 +9,19 @@
             const height = fullHeight ? window.innerHeight : 600;
             window.open(imagePath, '_blank', `width=800,height=${height}`);
         }
+        
+        function showMultipleImages(imagePaths, fullHeight = false) {
+            const height = fullHeight ? window.innerHeight : 600;
+            const combinedPath = imagePaths.join(',');
+            const features = `width=800,height=${height},scrollbars=yes`;
+            const win = window.open('', '_blank', features);
+            win.document.write('<html><body style="margin:0; padding:0;">');
+            imagePaths.forEach(path => {
+                win.document.write(`<img src="${path}" style="width:100%; display:block;">`);
+            });
+            win.document.write('</body></html>');
+            win.document.close();
+        }
     </script>
     <style>
         body {
@@ -84,43 +97,39 @@
         <div class="toc-section">
             <div class="toc-main-title">II. 사후상담(이행지상담) 스크립트</div>
             <div class="toc-item">
-                <div class="toc-item-title">1. 기본스크립트 / 인사말, 본인 확인 등</div>
+                <div class="toc-item-title clickable" onclick="showImage('images/6.jpg', true)">1. 기본스크립트 / 인사말, 본인 확인 등</div>
                 <div class="toc-item-page">6</div>
             </div>
             <div class="toc-item">
-                <div class="toc-item-title">2. 채무조정 현황</div>
+                <div class="toc-item-title clickable" onclick="showMultipleImages(['images/7.jpg', 'images/8.jpg'], true)">2. 채무조정 현황</div>
                 <div class="toc-item-page">7</div>
             </div>
             <div class="toc-item">
-                <div class="toc-item-title">3. 제도정</div>
+                <div class="toc-item-title clickable" onclick="showImage('images/9.jpg', true)">3. 재조정</div>
                 <div class="toc-item-page">9</div>
             </div>
             <div class="toc-sub-item">
-                <div class="toc-item-title">3-1. 제도정 방문상담 vs 인터넷 제도정</div>
+                <div class="toc-item-title clickable" onclick="showImage('images/10.jpg', true)">3-1. 제조정 방문상담 vs 인터넷 재조정</div>
                 <div class="toc-item-page">10</div>
             </div>
             <div class="toc-sub-item">
-                <div class="toc-item-title">3-2. 상환유예 제도정</div>
+                <div class="toc-item-title clickable" onclick="showImage('images/11.jpg', true)">3-2. 상환유예 재조정</div>
                 <div class="toc-item-page">11</div>
             </div>
             <div class="toc-sub-item">
-                <div class="toc-item-title">3-3. 미납률스 제도정</div>
+                <div class="toc-item-title clickable" onclick="showImage('images/12.jpg', true)">3-3. 미납일수 재조정</div>
                 <div class="toc-item-page">12</div>
             </div>
             <div class="toc-sub-item">
-                <div class="toc-item-title">3-4. 제도개선소급 제도정/ 이자율제도정</div>
+                <div class="toc-item-title clickable" onclick="showImage('images/13.jpg', true)">3-4. 제도개선소급 재조정/ 이자율재조정</div>
                 <div class="toc-item-page">13</div>
             </div>
             <div class="toc-sub-item">
-                <div class="toc-item-title">3-5. 상환기간 연장 제도정</div>
+                <div class="toc-item-title clickable" onclick="showImage('images/14.jpg', true)">3-5. 상환기간 연장 재조정</div>
                 <div class="toc-item-page">14</div>
             </div>
             <div class="toc-sub-item">
-                <div class="toc-item-title">3-6. (가칭) 사회적약계층이 되었다면?</div>
-                <div class="toc-item-page">15</div>
-            </div>
-            <div class="toc-sub-item">
-                <div class="toc-item-title">3-7. 재난상환유예 제도정</div>
+                <div class="toc-item-title clickable" onclick="showMultipleImages(['images/15.jpg', 'images/16.jpg'], true)">3-7. 재난상환유예 재조정</div>
                 <div class="toc-item-page">16</div>
             </div>
             <div class="toc-item">
