@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사전상담(미이행자상담) 스크립트</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', 'Nanum Gothic', sans-serif;
+            line-height: 1.5;
+            margin: 20px;
+        }
+        .toc {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .toc-section {
+            margin-bottom: 20px;
+        }
+        .toc-main-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .toc-item-title {
+            flex-grow: 1;
+        }
+        .toc-item-page {
+            margin-left: 10px;
+        }
+        .toc-sub-item {
+            padding-left: 20px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .toc-sub-sub-item {
+            padding-left: 40px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="toc">
+        <div class="toc-section">
+            <div class="toc-main-title">III. 사전상담(미이행자상담) 스크립트</div>
+            <div class="toc-item">
+                <div class="toc-item-title">1-1. [신용칸샐팅] 기본 스크립트</div>
+                <div class="toc-item-page">47</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-item-title">1-2. [신용플러스] 기본 스크립트</div>
+                <div class="toc-item-page">48</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-item-title">2. 서금원 플랫폼 사금융 예방 대출 연계 상담</div>
+                <div class="toc-item-page">49</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-item-title">3. 채무 관련 주요 문의</div>
+                <div class="toc-item-page">52</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 특수장, 재권대우</div>
+                <div class="toc-item-page">52</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 개무수리과의발행, 상속채무상담</div>
+                <div class="toc-item-page">53</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 보증채무</div>
+                <div class="toc-item-page">54</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 비금융채무</div>
+                <div class="toc-item-page">55</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 소멸시효, 휴대폰 통신요금</div>
+                <div class="toc-item-page">56</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-item-title">4. 연체 후 법적조치</div>
+                <div class="toc-item-page">58</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 불법추심</div>
+                <div class="toc-item-page">58</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 지급명령, 재산명시</div>
+                <div class="toc-item-page">59</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 유체동산 압류, 가압류와 재구조정</div>
+                <div class="toc-item-page">60</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 등장압류(급류제외/압류금지채권범위변경 등)</div>
+                <div class="toc-item-page">61</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 통장압류(압류골자), 급여(가)압류</div>
+                <div class="toc-item-page">62</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 부동산압류, 저당가압류, 사채명의</div>
+                <div class="toc-item-page">63</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 기타, 무토목인 부동산담보</div>
+                <div class="toc-item-page">64</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-item-title">5. 채무상환 방법</div>
+                <div class="toc-item-page">65</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-item-title">6. 개인회생/파산 관련 상세 문의</div>
+                <div class="toc-item-page">70</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 수임중단, 도취재무, 비면책채권</div>
+                <div class="toc-item-page">70</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 회구불상사금액, 외면아파트 수품급</div>
+                <div class="toc-item-page">71</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 부동산 담보대출</div>
+                <div class="toc-item-page">72</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 금지명형, 종지명형</div>
+                <div class="toc-item-page">73</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 개인회생/파산 절차 후 문의</div>
+                <div class="toc-item-page">73</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 개인회생/파산 철자 지연 문의</div>
+                <div class="toc-item-page">74</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 개인회생/파산 기각(폐지시) 문의</div>
+                <div class="toc-item-page">74</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-item-title"> 7. 신용관리</div>
+                <div class="toc-item-page">75</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 신용점수확인</div>
+                <div class="toc-item-page">75</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 신용점수관리</div>
+                <div class="toc-item-page">76</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 기타 신용정보 관련 질문</div>
+                <div class="toc-item-page">77</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 채무불이행자 정보</div>
+                <div class="toc-item-page">78</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 공공정보정보</div>
+                <div class="toc-item-page">79</div>
+            </div>
+            <div class="toc-sub-item">
+                <div class="toc-item-title">- 대출정보</div>
+                <div class="toc-item-page">79</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-item-title"> 8. 서민금융지원</div>
+                <div class="toc-item-page">80</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-item-title"> 9. 복지지원 등</div>
+                <div class="toc-item-page">81</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-item-title">10. 신용플러스 이용 안내 (타기관 App 연계 상담)</div>
+                <div class="toc-item-page">83</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
